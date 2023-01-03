@@ -5,8 +5,8 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const {
-  title = 'Portfolio Haico',
-  description = "I'm an UX Designer with a passion for Web Accessibility. Get to know me!",
+  title = 'Portfolio website Mark Teekman',
+  description = "I'm a Frontend Developer with a passion for Web Accessibility.",
   url,
   image = '/social-preview-image.png',
 } = Astro.props
@@ -32,7 +32,7 @@ const {
       url={
         Astro.site 
           ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-          : `https://https://haicopaulussen.nl/${title.toLowerCase().replaceAll(' ', '-')}`
+          : `https://markteekman.nl/${title.toLowerCase().replaceAll(' ', '-')}`
       }
       image={image}
     />
@@ -60,13 +60,32 @@ const {
   elements.forEach((element) => {
     observer.observe(element)
   })
+
+  const figlet = `
+%c __  __            _    _____         _                          
+%c|  \\/  | __ _ _ __| | _|_   _|__  ___| | ___ __ ___   __ _ _ __  
+%c| |\\/| |/ _\\ | '__| |/ / | |/ _ \\/ _ \\ |/ / '_ \\ _ \\ / _\\ | '_ \\ 
+%c| |  | | (_| | |  |   <  | |  __/  __/   <| | | | | | \(_| | | | |
+%c|_|  |_|\\__,_|_|  |_|\\_\\ |_|\\___|\\___|_|\\_\\_| |_| |_|\\__,_|_| |_|
+%c
+`
+
+  const HUE_STEP = -30
+  const HUE_OFFSET = 10
+
+  const styles = new Array(6)
+    .fill(0)
+    .map((_,i) => `color: hsl(${(i * HUE_STEP) + HUE_OFFSET}deg, 100%, 70%);`)
+
+  console.info(figlet, ...styles)
+  console.info("%cHey there explorer! Why not checkout my GitHub profile while you're here 🚀 https://github.com/markteekman/",`color: hsl(${(5 * HUE_STEP) + HUE_OFFSET}deg, 100%, 70%); font-size: 14px`);
 </script>
 
 <style lang="scss" is:global>
   // theme settings
   :root {
-    --primary-color: 254, 174, 40;
-    --secondary-color: 151, 71, 255;
+    --primary-color: 151, 71, 255;
+    --secondary-color: 0, 214, 255;
     --support-color-dark: 13, 15, 15;
     --support-color-darkest: 21, 21, 21;
     --bg-gradient: linear-gradient(45deg, rgb(var(--support-color-darkest)), rgb(var(--support-color-dark)) 50%, rgb(var(--support-color-darkest)) 100%);
@@ -113,6 +132,21 @@ const {
 		background-size: 400%;
 		background-position: 0%;
 	}
+
+  body a.fancy-link {
+    color: rgb(var(--secondary-color));
+    padding: 0.2rem 0.05rem;
+    box-shadow: inset 0 -0.475rem 0 rgba(var(--secondary-color), 0.3);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0.05s;
+
+    &:hover,
+    &:focus {
+      color: var(--neutral-900);
+      background-color: rgba(var(--secondary-color));
+      box-shadow: inset 0 -0.475rem 0 transparent;
+    }
+  }
 
   .animate {
     opacity: 0;

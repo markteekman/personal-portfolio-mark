@@ -7,28 +7,59 @@ import SkillBar from './SkillBar.astro'
   <div class="container">
     <div class="space-content animate">
       <h2>These are my skills</h2>
-      <p>Gebruikergericht ontwerpen, dat is waar UX Design om draait. Dit leer ik, dit oefen ik en dit doe ik. Maar je kan pas echt gebruikersgericht ontwerpen als je voor iedereen kan ontwerpen. Je wilt dat iedereen die super ervaring heeft op je website of software. Maar hoe kan iemand met bijvoorbeeld een visuele beperking die super ervaring ervaren? Dat is waar digitale toegankelijkheid aan bod komt. Ik wil dat iedereen de website optimaal kan ervaren, daarom ben ik expert geworden in digitale toegankelijkheid.</p>
+      <p>Senior Front-end Developer en (Design) System enthousiasteling met een zware focus op Web Toegankelijkheid. De basisvaardigheden van het web: HTML, CSS en JavaScript heb ik me eigen gemaakt en onderhoud ik continu. Met deze fundamentele kennis kan ik diverse (JavaScript) frameworks eigen maken. Momenteel werk ik graag met Vue.js en Astro.js. Ik gebruik SCSS of Tailwind CSS voor de opmaak en verdiep mezelf in topics zoals Unit Testing en TypeScript.</p>
+      <p>Alles wat ik doe draait om de Web Content Accessibility Guidelines (WCAG) en het opleveren van websites, applicaties en oplossingen die toegankelijk zijn voor screenreaders en mensen met een visuele, cognitieve-, auditive-, fysieke-, motorische- en/of spraakbeperking. Iedereen moet gebruik kunnen maken van het web.</p>
     </div>
     <div class="skills animate">
       <SkillBar
-      icon='mdi:pencil'
-      label='UX Designer'
-      progress='80' 
+        icon='mdi:language-html5'
+        label='HTML'
+        progress='95' 
       />
       <SkillBar 
-      icon='mdi:account-tie'
-      label='Product Owner'
-      progress='60'
+        icon='mdi:language-css3'
+        label='(S)CSS'
+        progress='95'
       />
       <SkillBar 
-      icon='mdi:user'
-      label='Scrummaster'
-      progress='80'
+        icon='mdi:language-javascript'
+        label='JavaScript'
+        progress='85'
       />
       <SkillBar 
-      icon='mdi:code-tags'
-      label='Frontend Developer'
-      progress='65'
+        icon='mdi:rocket-launch'
+        label='Astro.js'
+        progress='80'
+      />
+      <SkillBar 
+        icon='mdi:vuejs'
+        label='Vue.js'
+        progress='80'
+      />
+      <SkillBar 
+        icon='mdi:wheelchair-accessibility'
+        label='Web Accessibility'
+        progress='75'
+      />
+      <SkillBar 
+        icon='mdi:git'
+        label='Git, GitHub, CI/CD'
+        progress='75'
+      />
+      <SkillBar 
+        icon='mdi:test-tube'
+        label='Unit Testing'
+        progress='65'
+      />
+      <SkillBar 
+        icon='mdi:language-typescript'
+        label='TypeScript'
+        progress='50'
+      />
+      <SkillBar 
+        icon='mdi:react'
+        label='React'
+        progress='35'
       />
     </div>
   </div>
@@ -53,6 +84,6 @@ import SkillBar from './SkillBar.astro'
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 </style>

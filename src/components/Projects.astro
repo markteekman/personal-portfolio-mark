@@ -6,45 +6,48 @@ import ProjectCard from './ProjectCard.astro'
   <div class="section-divider" aria-hidden="true">Projects</div>
   <div class="container">
     <div class="space-content animate">
-      <h2>Here are some of my projects</h2>
-      <p>Ik heb verschillende projecten gedaan in mijn loopbaan. Hier een kleine greep uit de projecten waar ik trots op ben. Ik heb in sommige projecten ook een andere rol bekleed, dit vind je terug in de tags. Case studies zullen in de toekomst worden toegevoegd!</p>
+      <h2>Projects I do as a hobby</h2>
+      <p>In mijn vrije tijd werk ik graag aan toegankelijke Open Source projecten gemaakt met Astro.js en Vue.js en doe ik af en toe een challenge op Frontend Mentor om mijn skills verder aan te scherpen.</p>
+      <p>Zo heb ik onder andere voor Astro een toegankelijks starter thema gebouwd, een NPM package met toegankelijke .astro componenten en een Accessible Astro Dashboard die ik heb gemaakt tijdens de Astro Hackathon in april 2022. Hetzelfde idee ben ik nu aan het doen voor Vue.js.</p>
+      <p>De challenges die ik doe op Frontend Mentor hebben altijd een leer- en een funaspect erin zitten. Ik probeer toffe visuele dingen, of onderzoek nieuwe tools en technieken (state management met Pinia voor Vue, TypeScript of een project in React) om op die manier mijn skills in het vak te verbeteren.</p>
+      <p><a class="fancy-link" href="https://github.com/markteekman">Meer projecten op GitHub</a> of <a class="fancy-link" href="https://www.frontendmentor.io/profile/markteekman">op mijn Frontend Mentor profiel</a>.</p>
     </div>
     <div class="projects animate">
       <ProjectCard 
-        url="https://omnichannel.nl"
-        title="OmniChannel"
-        description="De alles-in-één oplossing voor winkeliers. Een multi-vendor verkoopplatform."
-        tags={['Product Owner', 'UX', 'WCAG']}
+        url="https://www.accessible-astro.dev/"
+        title="Accessible Astro"
+        description="Toegankelijk starter thema voor Astro.js met Design System utility tools."
+        tags={['Astro', 'SCSS', 'WCAG']}
       />
       <ProjectCard 
-        url="https://vuedesignsystem.nl/"
-        title="Design System"
-        description="Ontwerpen van toegankelijke componenten voor het Vue.js Design System."
-        tags={['UX', 'CSS', 'WCAG']}
+        url="https://github.com/markteekman/accessible-vue-starter"
+        title="Accessible Vue"
+        description="Toegankelijk starter thema voor Vue.js met Design System utility tools."
+        tags={['Vue', 'SCSS', 'WCAG']}
       />
       <ProjectCard 
-        url="https://www.johancruijffarena.nl/naar-de-arena/naar-de-arena/"
-        title="Mobility Portal"
-        description="Verrijking en optimalisatie van de Mobility Portal. Een tool die de optimale reis berekent naar jouw evenement."
-        tags={['Research', 'Testing', 'Incremental']}
+        url="https://markteekman.github.io/rock-paper-scissors-game/"
+        title="Rock, Paper, Siscors"
+        description="Frontend Mentor challenge, een JavaScript game voor steen, papier, schaar."
+        tags={['Astro', 'Vanilla JavaScript']}
       />
       <ProjectCard 
-        url="https://audit.wcag.nl/"
-        title="Tool WCAG"
-        description="Toegankelijke tool ontworpen waar onderzoekers websites kunnen toetsen en beoordelen op het naleven van WCAG."
-        tags={['Project Management', 'UX', 'WCAG']}
+        url="https://mealpreps.netlify.app/"
+        title="Mealprep App"
+        description="Tool voor mij en mijn vrouw om recepten bij te houden via Netlify CMS (WIP)."
+        tags={['Astro', 'Netlify CMS', 'CI/CD']}
       />
       <ProjectCard 
-        url="https://dutch.dev"
-        title="Dutch.dev"
-        description="Ontwerpen en ontwikkelen van website. Een platform om developers te detacheren en projecten te plaatsen."
-        tags={['UX', 'CSS', 'JS']}
+        url="https://markteekman.github.io/blogr-landing-page/"
+        title="Blogr website"
+        description="Frontend Mentor challenge website met verschillende thema's als bonus."
+        tags={['Astro', 'SCSS', 'WCAG']}
       />
       <ProjectCard 
-        url="https://www.kooplokaalnederland.nl"
-        title="KoopLokaal"
-        description="Het beheren en ontwerpen van de verkoopkanalen van KoopLokaal. De webshop van jouw lokale ondernemers."
-        tags={['Product Owner', 'UX', 'WCAG']}
+        url="https://markteekman.github.io/easybank-landing-page/"
+        title="Easybank website"
+        description="Frontend Mentor challenge met verschillende animaties via de Intersection Observer."
+        tags={['Astro', 'SCSS', 'WCAG']}
       />
     </div>
   </div>
