@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Portfolio website Mark Teekman',
-  description = "I'm a Frontend Developer with a passion for Web Accessibility.",
+  description = "Senior Front-end Developer en (Design) System enthousiasteling met een zware focus op Web Toegankelijkheid. De basisvaardigheden van het web: HTML, CSS en JavaScript heb ik me eigen gemaakt en onderhoud ik continu.",
   url,
   image = '/social-preview-image.png',
 } = Astro.props
@@ -53,7 +53,7 @@ const {
         entry.target.classList.add('is-visible')
       }
     })
-  }, { threshold: 0.25 })
+  }, { threshold: 0.15 })
     
   const elements = document.querySelectorAll('.animate')
     
