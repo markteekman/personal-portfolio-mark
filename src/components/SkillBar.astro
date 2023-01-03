@@ -1,0 +1,67 @@
+---
+import Icon from 'astro-icon'
+const {
+  icon = 'mdi:vuejs',
+  label = 'Vue.js',
+  progress = 80
+} = Astro.props
+---
+
+<div class="skill-bar">
+  <div class="skill-bar__label">
+    <Icon name={icon} aria-hidden="true" />
+  </div>
+  <div class="skill-bar__progress">
+    <span>{label}</span>
+    <div class="skill-bar__bar">
+      <div class="skill-bar__bar__fill " style={`width: ${progress}%`}>
+        <span class="sr-only">{progress}% van de 100%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @use '../assets/scss/base/size' as *;
+
+  .skill-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    .skill-bar__label [astro-icon] {
+      width: 2rem;
+      height: 2rem;
+      max-width: none;
+      color: lightslategrey;
+    }
+
+    .skill-bar__progress {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align-last: left;
+
+      span {
+        margin-bottom: 0.25rem;
+        color: var(--neutral-100);
+        @include size-12;
+      }
+    }
+
+    .skill-bar__bar {
+      height: 0.5rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      background-color: var(--neutral-900);
+
+      .skill-bar__bar__fill {
+        background-image: var(--color-gradient);
+        height: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+</style>

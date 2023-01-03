@@ -1,0 +1,93 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Skills from '../components/Skills.astro'
+import Projects from '../components/Projects.astro'
+import Bio from '../components/Bio.astro'
+import Socials from '../components/Socials.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <div class="container align-center">
+    <div class="scroll">
+      <p>Scroll</p>
+    </div>
+  </div>
+  <Skills />
+  <Projects />
+  <Bio />
+  <Socials /> 
+</DefaultLayout>
+
+<style lang="scss" is:global>
+  @use '../assets/scss/base/size' as *;
+
+  section {
+    position: relative;
+    margin-top: 20vh;
+    padding: 12rem 0 30rem;
+
+    @media (min-width: 768px) {
+      margin-top: 40vh;
+    }
+  }
+
+  section .section-divider {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-family: var(--font-family-special);
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    opacity: 0.1;
+    user-select: none;
+
+    @media (min-width: 768px) {
+      left: 2rem;
+      font-size: 10rem;
+      letter-spacing: 1rem;
+    }
+  }
+
+  section h2 {
+    @include size-48;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 300px;
+      height: 3px;
+      background-image: var(--color-gradient);
+    }
+  }
+
+  section p {
+    @include size-20;
+  }
+
+  .scroll {
+    margin-top: -15vh;
+
+    @media (max-height: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  .scroll p {
+    text-transform: uppercase;
+  }
+
+  .scroll::after {
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    margin-left: 50%;
+    width: 1px;
+    height: 400px;
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+</style>

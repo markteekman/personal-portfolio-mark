@@ -1,0 +1,58 @@
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <section class="padding-16">
+    <div class="container align-center">
+      <p>&copy; {currentYear} - Made with ❤️, ☕ and a little ✨</p>
+    </div>
+  </section>
+  <div class="secret margin-128 top">
+    <button title="Je hebt een Easter Egg gevonden, klik voor confetti!">🎉</button>
+  </div>
+</footer>
+
+<script>
+  import confetti from 'canvas-confetti'
+
+  const confettiButton = document.querySelector('.secret button')
+
+  function randomInRange (min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  confettiButton.addEventListener('click', () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    })
+  })
+</script>
+
+<style lang="scss">
+  p {
+    text-align: center;
+  }
+
+  .secret {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 8rem 0 4rem;
+  
+    button {
+      position: absolute;
+      display: inline-block;
+      border: none;
+      transform: rotate(-40deg);
+      transition: all 0.5s ease;
+
+      &:hover {
+        margin-top: -255px;
+        font-size: 10rem;
+      }
+    }
+  }
+</style>

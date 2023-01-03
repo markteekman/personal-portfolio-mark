@@ -1,0 +1,42 @@
+<section>
+  <div class="section-divider" aria-hidden="true">Bio</div>
+  <div class="container">
+    <div class="space-content animate">
+      <h2>Let me tell you a bit more about me</h2>
+      <p>Ik ben Haico, geboren op 06 juli 1998 in Doetinchem. Ik woon in Duiven met mijn vriendin en hond. Mijn hobbies zijn waterpolo, fotografie en de natuur ingaan. Naast deze hobbies houd ik ook erg van reizen. Ik heb het geluk gehad om al veel mooie en bijzondere reizen te maken naar midden-amerika en afrika. Maar ik heb nog lang niet alles gezien en mijn wensenlijstje is nog erg lang! Handig om over mij te weten: Ik ben groot formule 1 fan. Ik kijk dit altijd en praat hier ook veel over.</p>
+      <p>User Experience Designer met een passie voor digitale toegankelijkheid! Van gebruikersonderzoek tot het ontwerpen van pixel perfect ontwerpen, overal kan ik mijn ei kwijt. De variatie in de werkzaamheden en het proberen te innoveren is iets wat mij drijft. Daarnaast vind ik het erg cool om ook mijn ontwerpen te verwezenlijken door deze zelf te bouwen. Persoonlijke ontwikkeling vind ik erg belangrijk, daarom ben ik altijd bezig met leren: Accessibilty, HTML, CSS, JavaScript, Agile, Scrum en ga zo maar door.</p> 
+      <img src="/dotgrid-bio.png" alt="">
+    </div>
+    <div class="me-myself-and-i animate">
+      <img src="/haico-and-akio.png" alt="">
+      <img src="/travel-the-world.png" alt="">
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .me-myself-and-i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+</style>

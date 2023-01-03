@@ -1,0 +1,132 @@
+---
+import '../assets/scss/globals.scss'
+import SiteMeta from '../components/SiteMeta.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const {
+  title = 'Portfolio Haico',
+  description = "I'm an UX Designer with a passion for Web Accessibility. Get to know me!",
+  url,
+  image = '/social-preview-image.png',
+} = Astro.props
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <SiteMeta
+      title={title}
+      description={description.substring(0, 100)}
+      url={
+        Astro.site 
+          ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
+          : `https://https://haicopaulussen.nl/${title.toLowerCase().replaceAll(' ', '-')}`
+      }
+      image={image}
+    />
+  </head>
+  <body>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+      }
+    })
+  }, { threshold: 0.25 })
+    
+  const elements = document.querySelectorAll('.animate')
+    
+  elements.forEach((element) => {
+    observer.observe(element)
+  })
+</script>
+
+<style lang="scss" is:global>
+  // theme settings
+  :root {
+    --primary-color: 254, 174, 40;
+    --secondary-color: 151, 71, 255;
+    --support-color-dark: 13, 15, 15;
+    --support-color-darkest: 21, 21, 21;
+    --bg-gradient: linear-gradient(45deg, rgb(var(--support-color-darkest)), rgb(var(--support-color-dark)) 50%, rgb(var(--support-color-darkest)) 100%);
+    --color-gradient: linear-gradient(45deg, rgb(var(--primary-color)), rgb(var(--secondary-color)));
+    --text-gradient: linear-gradient(45deg, rgb(var(--primary-color)), rgb(var(--secondary-color)) 30%, white 60%);
+
+    --radius-small: 3px;
+    --radius-large: 6px;
+    --gap-default: 2rem;
+    --font-measure: 70ch;
+    --font-family-default: "Lato", sans-serif;
+    --font-family-special: "Oswald", sans-serif;
+    --font-color: var(--neutral-100);
+    --action-color: var(--neutral-100);
+    --background: var(--bg-gradient);
+  }
+
+  // sticky footer on low content pages
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: var(--bg-gradient);
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      flex-shrink: 0;
+    }
+  }
+
+  .text-gradient {
+		background-image: var(--text-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+  .animate {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+
+    + .animate {
+      transition-delay: 0.3s;
+    }
+  }
+
+  .is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

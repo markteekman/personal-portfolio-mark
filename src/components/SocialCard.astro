@@ -1,0 +1,74 @@
+---
+import Icon from 'astro-icon'
+
+const { 
+  url = '#',
+  icon = 'mdi:github', 
+  platform = 'GitHub',
+  username = 'Haico-Paulussen',
+  hasSVG = false
+} = Astro.props
+---
+
+<a href={url} class="social-card">
+  <div class="social-card__platform">
+    { hasSVG === true ? <slot /> : <Icon name={icon} /> }
+    <h3>{platform}</h3>
+  </div>
+  <div class="social-card__username">
+    <p>{username}</p>
+  </div>
+</a>
+
+<style lang="scss">
+  .social-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(var(--support-color-dark));
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255 255 255 / 0.3);
+    border-radius: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 0 12px 0 rgba(255 255 255 / 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .social-card:hover,
+  .social-card:focus {
+    background: linear-gradient(rgb(var(--support-color-darkest)), rgb(var(--support-color-darkest))) padding-box,
+      linear-gradient(
+          to left,
+          rgb(var(--primary-color)),
+          rgb(var(--secondary-color))
+        )
+        border-box;
+    border-color: transparent;
+    transform: translateY(-0.5rem);
+
+    h3 {
+      text-decoration: none;
+    }
+  }
+
+  .social-card__platform {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-card h3 {
+    letter-spacing: 3px;
+    text-decoration: underline;
+    font-family: var(--font-family-special);
+    font-weight: 400;
+  }
+
+  svg,
+  [astro-icon] {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+</style>

@@ -1,0 +1,23 @@
+{
+  "name": "Portfolio Haico",
+  "description": "I'm an UX Designer with a passion for Web Accessibility. Get to know me!",
+  "version": "1.6.1",
+  "author": "Haico Paulussen",
+  "homepage": "https://accessible-astro.dev",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "accessible-astro-components": "^1.6.1",
+    "astro-icon": "^0.7.3",
+    "atropos": "^1.0.2",
+    "canvas-confetti": "^1.6.0"
+  },
+  "devDependencies": {
+    "astro": "^1.6.3",
+    "sass": "^1.49.9"
+  }
+}

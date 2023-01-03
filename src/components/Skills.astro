@@ -1,0 +1,58 @@
+---
+import SkillBar from './SkillBar.astro'
+---
+
+<section>
+  <div class="section-divider" aria-hidden="true">Skills</div>
+  <div class="container">
+    <div class="space-content animate">
+      <h2>These are my skills</h2>
+      <p>Gebruikergericht ontwerpen, dat is waar UX Design om draait. Dit leer ik, dit oefen ik en dit doe ik. Maar je kan pas echt gebruikersgericht ontwerpen als je voor iedereen kan ontwerpen. Je wilt dat iedereen die super ervaring heeft op je website of software. Maar hoe kan iemand met bijvoorbeeld een visuele beperking die super ervaring ervaren? Dat is waar digitale toegankelijkheid aan bod komt. Ik wil dat iedereen de website optimaal kan ervaren, daarom ben ik expert geworden in digitale toegankelijkheid.</p>
+    </div>
+    <div class="skills animate">
+      <SkillBar
+      icon='mdi:pencil'
+      label='UX Designer'
+      progress='80' 
+      />
+      <SkillBar 
+      icon='mdi:account-tie'
+      label='Product Owner'
+      progress='60'
+      />
+      <SkillBar 
+      icon='mdi:user'
+      label='Scrummaster'
+      progress='80'
+      />
+      <SkillBar 
+      icon='mdi:code-tags'
+      label='Frontend Developer'
+      progress='65'
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    margin-top: 20vh;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>

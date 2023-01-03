@@ -1,0 +1,85 @@
+---
+import ProjectCard from './ProjectCard.astro'
+---
+
+<section>
+  <div class="section-divider" aria-hidden="true">Projects</div>
+  <div class="container">
+    <div class="space-content animate">
+      <h2>Here are some of my projects</h2>
+      <p>Ik heb verschillende projecten gedaan in mijn loopbaan. Hier een kleine greep uit de projecten waar ik trots op ben. Ik heb in sommige projecten ook een andere rol bekleed, dit vind je terug in de tags. Case studies zullen in de toekomst worden toegevoegd!</p>
+    </div>
+    <div class="projects animate">
+      <ProjectCard 
+        url="https://omnichannel.nl"
+        title="OmniChannel"
+        description="De alles-in-één oplossing voor winkeliers. Een multi-vendor verkoopplatform."
+        tags={['Product Owner', 'UX', 'WCAG']}
+      />
+      <ProjectCard 
+        url="https://vuedesignsystem.nl/"
+        title="Design System"
+        description="Ontwerpen van toegankelijke componenten voor het Vue.js Design System."
+        tags={['UX', 'CSS', 'WCAG']}
+      />
+      <ProjectCard 
+        url="https://www.johancruijffarena.nl/naar-de-arena/naar-de-arena/"
+        title="Mobility Portal"
+        description="Verrijking en optimalisatie van de Mobility Portal. Een tool die de optimale reis berekent naar jouw evenement."
+        tags={['Research', 'Testing', 'Incremental']}
+      />
+      <ProjectCard 
+        url="https://audit.wcag.nl/"
+        title="Tool WCAG"
+        description="Toegankelijke tool ontworpen waar onderzoekers websites kunnen toetsen en beoordelen op het naleven van WCAG."
+        tags={['Project Management', 'UX', 'WCAG']}
+      />
+      <ProjectCard 
+        url="https://dutch.dev"
+        title="Dutch.dev"
+        description="Ontwerpen en ontwikkelen van website. Een platform om developers te detacheren en projecten te plaatsen."
+        tags={['UX', 'CSS', 'JS']}
+      />
+      <ProjectCard 
+        url="https://www.kooplokaalnederland.nl"
+        title="KoopLokaal"
+        description="Het beheren en ontwerpen van de verkoopkanalen van KoopLokaal. De webshop van jouw lokale ondernemers."
+        tags={['Product Owner', 'UX', 'WCAG']}
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .projects {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .projects::after {
+    content: '';
+    position: absolute;
+    width: 276px;
+    height: 252px;
+    background-repeat: no-repeat;
+    bottom: -230px;
+    left: -100px;
+    background-image: url('/dotgrid-projects.png');
+  }
+</style>

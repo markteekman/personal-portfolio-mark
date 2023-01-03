@@ -1,0 +1,76 @@
+---
+const {
+  url = '#',
+  title = 'Project',
+  tags = [],
+  description = 'Description',
+} = Astro.props
+---
+
+<a href={url} class="project-card">
+  <h3>{title}</h3>
+  <span class="card-tags">
+    {tags.map((tag) => (
+      <span>{tag}</span>
+    ))}
+  </span>
+  <p>{description}</p>
+</a>
+
+<style lang="scss">
+  .project-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(var(--support-color-dark));
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255 255 255 / 0.3);
+    border-radius: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 0 12px 0 rgba(255 255 255 / 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .project-card:hover,
+  .project-card:focus {
+    background: linear-gradient(rgb(var(--support-color-darkest)), rgb(var(--support-color-darkest))) padding-box,
+      linear-gradient(
+          to left,
+          rgb(var(--primary-color)),
+          rgb(var(--secondary-color))
+        )
+        border-box;
+    border-color: transparent;
+    transform: translateY(-0.5rem);
+
+    h3 {
+      text-decoration: none;
+    }
+  }
+
+  .project-card > h3 {
+    text-decoration: underline;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: x-small;
+
+    > * {
+      padding: 0 0.5rem;
+      border-radius: 6px;
+      color: var(--neutral-900);
+      background-color: rgb(var(--primary-color));
+      font-weight: bold;
+    }
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+</style>

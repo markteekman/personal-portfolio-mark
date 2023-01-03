@@ -1,0 +1,28 @@
+---
+import { SkipLinks } from 'accessible-astro-components'
+import LogoAvatar from './LogoAvatar.astro'
+import PrimaryButton from './PrimaryButton.astro'
+---
+
+<header>
+  <SkipLinks />
+  <div>
+    <LogoAvatar />
+    <PrimaryButton />
+  </div>
+</header>
+
+<style>
+  header {
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    z-index: 5;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
