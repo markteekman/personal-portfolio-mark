@@ -1,5 +1,5 @@
-# Personal Portfolio
+# Personal Portfolio Mark
 
-A template on which the portfolio's of Haico and Mark will be build. It has a collection of reusable components which both websites will use. Eventually each website will get it's own repository and custom design depending on the differences.
+This repo holds my personal portfolio at [https://markteekman.nl](https://markteekman.nl).
 
-![1669122797302](https://user-images.githubusercontent.com/3909046/205878913-2477b10e-ccf4-4f63-aa67-39ae57d80539.jpeg)
+![banner](https://user-images.githubusercontent.com/3909046/214525660-5cebc850-2987-4dae-af7d-abc0e06c8b13.jpeg)
