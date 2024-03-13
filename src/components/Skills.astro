@@ -1,65 +1,84 @@
 ---
-import SkillBar from './SkillBar.astro'
+import SkillBar from './SkillBar.astro';
 ---
 
 <section>
-  <div class="section-divider" aria-hidden="true">Skills</div>
+  <div
+    class="section-divider"
+    aria-hidden="true"
+  >
+    Skills
+  </div>
   <div class="container">
     <div class="space-content animate">
       <h2>These are my skills</h2>
-      <p>Senior Front-end Developer en (Design) System enthousiasteling met een zware focus op Web Toegankelijkheid. De basisvaardigheden van het web: HTML, CSS en JavaScript heb ik me eigen gemaakt en onderhoud ik continu. Met deze fundamentele kennis kan ik diverse (JavaScript) frameworks eigen maken. Momenteel werk ik graag met Vue.js en Astro.js. Ik gebruik SCSS of Tailwind CSS voor de opmaak en verdiep mezelf in topics zoals Unit Testing en TypeScript.</p>
-      <p>Alles wat ik doe draait om de Web Content Accessibility Guidelines (WCAG) en het opleveren van websites, applicaties en oplossingen die toegankelijk zijn voor screenreaders en mensen met een visuele, cognitieve-, auditive-, fysieke-, motorische- en/of spraakbeperking. Iedereen moet gebruik kunnen maken van het web.</p>
+      <p>
+        Senior Front-end Developer en (Design) System enthousiasteling met een
+        zware focus op Web Toegankelijkheid. De basisvaardigheden van het web:
+        HTML, CSS en JavaScript heb ik me eigen gemaakt en onderhoud ik continu.
+        Met deze fundamentele kennis kan ik diverse (JavaScript) frameworks
+        eigen maken. Momenteel werk ik graag met Vue.js en Astro.js. Ik gebruik
+        SCSS of Tailwind CSS voor de opmaak en verdiep mezelf in topics zoals
+        Unit Testing en TypeScript.
+      </p>
+      <p>
+        Alles wat ik doe draait om de Web Content Accessibility Guidelines
+        (WCAG) en het opleveren van websites, applicaties en oplossingen die
+        toegankelijk zijn voor screenreaders en mensen met een visuele,
+        cognitieve-, auditive-, fysieke-, motorische- en/of spraakbeperking.
+        Iedereen moet gebruik kunnen maken van het web.
+      </p>
     </div>
     <div class="skills animate">
       <SkillBar
-        icon='mdi:language-html5'
-        label='HTML'
-        progress='95' 
+        icon="mdi:language-html5"
+        label="HTML"
+        progress="95"
       />
-      <SkillBar 
-        icon='mdi:language-css3'
-        label='(S)CSS'
-        progress='95'
+      <SkillBar
+        icon="mdi:language-css3"
+        label="(S)CSS"
+        progress="95"
       />
-      <SkillBar 
-        icon='mdi:language-javascript'
-        label='JavaScript'
-        progress='85'
+      <SkillBar
+        icon="mdi:language-javascript"
+        label="JavaScript"
+        progress="95"
       />
-      <SkillBar 
-        icon='mdi:rocket-launch'
-        label='Astro.js'
-        progress='80'
+      <SkillBar
+        icon="mdi:wheelchair-accessibility"
+        label="Web Accessibility (WCAG)"
+        progress="95"
       />
-      <SkillBar 
-        icon='mdi:vuejs'
-        label='Vue.js'
-        progress='80'
+      <SkillBar
+        icon="mdi:rocket-launch"
+        label="Astro.js"
+        progress="85"
       />
-      <SkillBar 
-        icon='mdi:wheelchair-accessibility'
-        label='Web Accessibility'
-        progress='75'
+      <SkillBar
+        icon="mdi:vuejs"
+        label="Vue.js"
+        progress="85"
       />
-      <SkillBar 
-        icon='mdi:git'
-        label='Git, GitHub, CI/CD'
-        progress='75'
+      <SkillBar
+        icon="mdi:git"
+        label="Git, GitHub, CI/CD"
+        progress="85"
       />
-      <SkillBar 
-        icon='mdi:test-tube'
-        label='Unit Testing'
-        progress='65'
+      <SkillBar
+        icon="mdi:wordpress"
+        label="WordPress (PHP / ACF)"
+        progress="75"
       />
-      <SkillBar 
-        icon='mdi:language-typescript'
-        label='TypeScript'
-        progress='50'
+      <SkillBar
+        icon="mdi:react"
+        label="React"
+        progress="60"
       />
-      <SkillBar 
-        icon='mdi:react'
-        label='React'
-        progress='35'
+      <SkillBar
+        icon="mdi:shopping"
+        label="Shopifi (Liquid)"
+        progress="60"
       />
     </div>
   </div>

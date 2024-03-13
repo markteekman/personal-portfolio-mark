@@ -1,49 +1,80 @@
 ---
-import ProjectCard from './ProjectCard.astro'
+import ProjectCard from './ProjectCard.astro';
 ---
 
 <section>
-  <div class="section-divider" aria-hidden="true">Projects</div>
+  <div
+    class="section-divider"
+    aria-hidden="true"
+  >
+    Projects
+  </div>
   <div class="container">
     <div class="space-content animate">
       <h2>Projects I do as a hobby</h2>
-      <p>In mijn vrije tijd werk ik graag aan toegankelijke Open Source projecten gemaakt met Astro.js en Vue.js en doe ik af en toe een challenge op Frontend Mentor om mijn skills verder aan te scherpen.</p>
-      <p>Zo heb ik onder andere voor Astro een toegankelijks starter thema gebouwd, een NPM package met toegankelijke .astro componenten en een Accessible Astro Dashboard die ik heb gemaakt tijdens de Astro Hackathon in april 2022. Hetzelfde idee ben ik nu aan het doen voor Vue.js.</p>
-      <p>De challenges die ik doe op Frontend Mentor hebben altijd een leer- en een funaspect erin zitten. Ik probeer toffe visuele dingen, of onderzoek nieuwe tools en technieken (state management met Pinia voor Vue, TypeScript of een project in React) om op die manier mijn skills in het vak te verbeteren.</p>
-      <p><a class="fancy-link" href="https://github.com/markteekman">Meer projecten op GitHub</a> of <a class="fancy-link" href="https://www.frontendmentor.io/profile/markteekman">op mijn Frontend Mentor profiel</a>.</p>
+      <p>
+        In mijn vrije tijd werk ik graag aan toegankelijke Open Source projecten
+        gemaakt met Astro.js en Vue.js en doe ik af en toe een challenge op
+        Frontend Mentor om mijn skills verder aan te scherpen.
+      </p>
+      <p>
+        Zo heb ik onder andere voor Astro een toegankelijk starter thema
+        gebouwd, een NPM package met toegankelijke .astro componenten en een
+        Accessible Astro Dashboard die ik heb gemaakt tijdens de Astro Hackathon
+        in april 2022. Hetzelfde idee ben ik nu aan het doen voor Vue.js.
+      </p>
+      <p>
+        De challenges die ik doe op Frontend Mentor hebben altijd een leer- en
+        een funaspect erin zitten. Ik probeer toffe visuele dingen, of onderzoek
+        nieuwe tools en technieken (state management met Pinia voor Vue,
+        TypeScript of een project in React) om op die manier mijn skills in het
+        vak te verbeteren.
+      </p>
+      <p>
+        <a
+          class="fancy-link"
+          href="https://github.com/markteekman"
+          >Meer projecten op GitHub</a
+        > of <a
+          class="fancy-link"
+          href="https://www.frontendmentor.io/profile/markteekman"
+          >op mijn Frontend Mentor profiel</a
+        >.
+      </p>
     </div>
     <div class="projects animate">
-      <ProjectCard 
+      <ProjectCard
         url="https://www.accessible-astro.dev/"
         title="Accessible Astro"
         description="Toegankelijk starter thema voor Astro.js met Design System utility tools."
         tags={['Astro', 'SCSS', 'WCAG']}
       />
-      <ProjectCard 
-        url="https://github.com/markteekman/accessible-vue-starter"
-        title="Accessible Vue"
-        description="Toegankelijk starter thema voor Vue.js met Design System utility tools."
-        tags={['Vue', 'SCSS', 'WCAG']}
+      <ProjectCard
+        url="https://markteekman.github.io/multi-step-form/"
+        title="Multi Step Form"
+        description="Frontend Mentor challenge, een multi step formulier gebouwd met Vue, Pinia en Astro."
+        tags={['Astro', 'Vue', 'Pinia', 'WCAG']}
       />
-      <ProjectCard 
+      <ProjectCard
         url="https://markteekman.github.io/rock-paper-scissors-game/"
         title="Rock, Paper, Siscors"
         description="Frontend Mentor challenge, een JavaScript game voor steen, papier, schaar."
         tags={['Astro', 'Vanilla JavaScript']}
       />
-      <ProjectCard 
-        url="https://mealpreps.netlify.app/"
-        title="Mealprep App"
-        description="Tool voor mij en mijn vrouw om recepten bij te houden via Netlify CMS (WIP)."
-        tags={['Astro', 'Netlify CMS', 'CI/CD']}
+      <ProjectCard
+        url="https://accessible-react-word-game.netlify.app/"
+        title="React Word Game"
+        description="De game 'Wordle' maar dan toegankelijk gemaakt met React."
+        tags={['React', 'WCAG', 'Netlify']}
       />
-      <ProjectCard 
-        url="https://markteekman.github.io/blogr-landing-page/"
-        title="Blogr website"
-        description="Frontend Mentor challenge website met verschillende thema's als bonus."
-        tags={['Astro', 'SCSS', 'WCAG']}
+      <ProjectCard
+        url="https://markteekman.github.io/the-mushroom-intranet/login"
+        title="Mushroom Intranet"
+        description="Demo van een intranet met een Super Mario thema gebouwd met Vue, Pinia en Astro."
+        tags={['Astro', 'Vue', 'Pinia', 'WCAG']}
+        }
       />
-      <ProjectCard 
+      <ProjectCard
         url="https://markteekman.github.io/easybank-landing-page/"
         title="Easybank website"
         description="Frontend Mentor challenge met verschillende animaties via de Intersection Observer."

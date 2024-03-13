@@ -1,9 +1,9 @@
 {
-  "name": "Portfolio Haico",
-  "description": "I'm an UX Designer with a passion for Web Accessibility. Get to know me!",
-  "version": "1.6.1",
-  "author": "Haico Paulussen",
-  "homepage": "https://accessible-astro.dev",
+  "name": "Portfolio Mark",
+  "description": "I'm a Frontend Developer with a love for Web Accessibility",
+  "version": "1.7.0",
+  "author": "Mark Teekman",
+  "homepage": "https://www.markteekman.nl/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
