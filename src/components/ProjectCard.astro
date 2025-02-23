@@ -4,15 +4,16 @@ const {
   title = 'Project',
   tags = [],
   description = 'Description',
-} = Astro.props
+} = Astro.props;
 ---
 
-<a href={url} class="project-card">
+<a
+  href={url}
+  class="project-card"
+>
   <h3>{title}</h3>
   <span class="card-tags">
-    {tags.map((tag) => (
-      <span>{tag}</span>
-    ))}
+    {tags.map((tag) => <span>{tag}</span>)}
   </span>
   <p>{description}</p>
 </a>
@@ -35,7 +36,11 @@ const {
 
   .project-card:hover,
   .project-card:focus {
-    background: linear-gradient(rgb(var(--support-color-darkest)), rgb(var(--support-color-darkest))) padding-box,
+    background: linear-gradient(
+          rgb(var(--support-color-darkest)),
+          rgb(var(--support-color-darkest))
+        )
+        padding-box,
       linear-gradient(
           to left,
           rgb(var(--primary-color)),
@@ -73,5 +78,6 @@ const {
   .project-card p {
     font-size: 1rem;
     line-height: 1.5rem;
+    text-wrap: balance;
   }
 </style>
